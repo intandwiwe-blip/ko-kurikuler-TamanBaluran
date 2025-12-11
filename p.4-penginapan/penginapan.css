@@ -1,0 +1,373 @@
+:root{
+  --green: rgb(41,60,17);
+  --cream: #fff8f0;
+  --muted: #eee6e6af;
+  --text: #222;
+  --card-shadow: rgba(2,6,10,0.12);
+}
+
+/* Reset & layout */
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background: linear-gradient(180deg,var(--muted),var(--cream)); color:var(--text); -webkit-font-smoothing:antialiased;}
+
+/* =====================================================
+   NAVBAR START
+   ===================================================== */
+.navbar {
+  display: flex; /* Biar item-item di navbar sejajar ke samping */
+  justify-content: space-between; /* Yang kiri sama kanan dijauhin biar rapi */
+  align-items: center; /* Tingginya dibikin rata tengah semua */
+
+  position: fixed; /* Navbar-nya nempel terus di atas layar */
+  top: 0; /* Ditempel di bagian paling atas */
+  left: 0; /* Ditaro dari sisi kiri layar */
+  width: 100%; /* Lebarnya full satu layar */
+  z-index: 9999; /* Biar ga ketutupan elemen lain */
+
+  padding: 10px 40px; /* Jarak dalam, biar ga dempet ke pinggir */
+  border-bottom: 1px solid #b6895b; /* Garis tipis di bawah biar keliatan keren */
+
+  background-color: rgba(244, 237, 237, 0.9); /* Warna putih agak transparan */
+  backdrop-filter: blur(5px); /* Bikin efek blur */
+  -webkit-backdrop-filter: blur(5px); /* biar bisa di safari */
+
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Animasi halus kalo berubah */
+}
+
+.navbar.scrolled {
+  background: #eee6e6af; /* warna navbar pas di-scroll */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* biar support Safari */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+.navbar .navbar-logo {
+  padding-top: 5px; /* jarak atas logo */
+  margin-left: -8px; /* geser logo ke kiri */
+}
+
+.navbar .navbar-teks {
+  font-size: 1.2rem; /* ukuran teks */
+  font-weight: 700; /* ketebalan teks */
+  color: #27804d; /* warna teks */
+  position: absolute; /* biar bisa diatur bebas */
+  padding-left: 63px; /* jarak kiri teks */
+  font-style: italic; /* teks miring */
+  text-decoration: none;
+}
+
+.navbar .navbar-teks span {
+  color: #0e3d0d; /* warna hijau gelap di span */
+}
+
+.navbar .navbar-nav a {
+  color: #0e3d0d; /* warna teks menu */
+  display: inline-block; /* sejajar horizontal */
+  font-size: 1.4rem; /* ukuran teks menu */
+  margin: 0 0.5rem; /* jarak antar menu */
+  font-weight: 700; /* ketebalan teks */
+  padding-top: 14px; /* jarak teks dari atas */
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #2e965b; /* ubah warna pas hover */
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0; /* garis muncul dari kiri */
+  content: ''; /* garis bawah */
+  display: block; /* biar bisa diatur ukuran */
+  padding-bottom: 0.5rem; /* jarak bawah */
+  border-bottom: 0.1rem solid #2e965b; /* warna garis bawah */
+  transform: scaleX(0); /* sembunyikan dulu */
+  transition: 0.2s linear; /* efek animasi */
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1); /* garis muncul di bawah */
+}
+
+.navbar .navbar-extra a {
+  color: rgb(41, 60, 17); /* warna icon */
+  margin: 0 0.5rem; /* jarak antar icon */
+}
+
+.navbar .navbar-extra a:hover {
+  color: #2e965b; /* warna icon pas hover */
+}
+
+.navbar .navbar-extra {
+  display: flex;
+}
+
+/* Wrapper */
+.wrap{max-width:1180px; margin:28px auto; padding:0 16px; padding-top: 100px;}
+
+/* HERO */
+.hero{background: linear-gradient(180deg, rgba(41,60,17,0.46), rgba(41,60,17,0.26)), url('img/hero-baluran.jpg') center/cover no-repeat; border-radius:14px; padding:38px; color:var(--cream); display:flex; align-items:center; justify-content:center;}
+.hero-inner{max-width:920px; text-align:center;}
+.hero h1{font-family:"Poppins",sans-serif; font-size:30px; margin:0 0 8px; color: var(--cream);}
+.lead{opacity:0.95; margin:0 0 14px; font-size:15px;}
+.hero-ctas{display:flex; gap:10px; justify-content:center;}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;}
+.btn.primary{background:var(--green); color:var(--cream); box-shadow:0 10px 30px var(--card-shadow);}
+.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.12); color:var(--cream);}
+
+/* GRID */
+.list-section{margin-top:22px;}
+.grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:18px;}
+
+/* CARD */
+.card{background: linear-gradient(180deg, var(--cream), #fff); border-radius:18px; overflow:hidden; box-shadow:0 12px 40px var(--card-shadow); border:1px solid rgba(0,0,0,0.04); transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .3s;}
+.card:hover{transform:translateY(-10px) scale(1.02); box-shadow:0 28px 80px rgba(2,6,10,0.14);}
+.img{height:200px; overflow:hidden;}
+.img img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}
+.card:hover .img img{transform:scale(1.06);}
+.card-body{padding:16px; display:flex; flex-direction:column; gap:8px;}
+.card-body h3{margin:0; color:var(--green); font-family:"Poppins",sans-serif; font-size:18px;}
+.meta{font-size:13px; color:#555;}
+.price{font-size:15px; color:#222; font-weight:600;}
+.fac{font-size:13px; color:#444;}
+.rating{font-size:13px; color:#9a7b2f;}
+.actions{margin-top:8px;}
+.btn.outline{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--green);color:var(--green);text-decoration:none;font-weight:600;}
+
+/* MAP SECTION */
+.map-wrap{margin:34px 0 60px; text-align:center;}
+.map-wrap h2{font-size:20px; color:var(--green); margin-bottom:12px; font-family:"Poppins",sans-serif;}
+.map-wrap iframe{width:100%; height:520px; border-radius:14px; box-shadow:0 12px 40px rgba(2,6,10,0.12); border: none;}
+
+/* Footer */
+.site-footer{text-align:center;padding:18px 12px;margin-top:18px;color:#333; font-size:13px;}
+
+/* ================================
+   DESKTOP (>= 1024px)
+   ================================ */
+@media (min-width: 1024px) {
+  /* Hilangin hamburger */
+  #hamburger-menu {
+    display: none;
+  }
+
+  .fasilitas-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    padding: 40px 100px;
+  }
+
+  .fasilitas-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .fasilitas-item img {
+    width: 90px;
+    margin: 0 auto 15px auto;
+  } 
+}
+
+/* DESKTOP */ 
+@media (min-width: 1024px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+/* SEMBUNYIKAN HAMBURGER DI DESKTOP */
+#hamburger-menu {
+  display: none; /* tidak tampil di desktop */
+}
+
+/* HP + Tablet */
+@media (max-width: 1023px) {
+
+  /* Sembunyikan menu utama */
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5); /* agar garis dibawah teksnya tidak kepanjangan */
+  }
+
+  /* Tampilkan menu setelah hamburger diklik */
+  .navbar-nav.active {
+    display: flex;
+    padding-left: 10px;
+  }
+
+  /* Tampilkan hamburger */
+  #hamburger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar-extra {
+    display: flex;
+    align-items: center;
+    gap: 4px;  /* kasih jarak ikon */
+  }
+
+  #hamburger-menu {
+    order: 3; /* biar posisinya setelah globe */
+    display: block;
+  }
+
+  #search {
+    order: 1;
+  }
+
+  #bahasa { /* ikon globe */
+    order: 2;
+  }
+}
+
+
+/* --- Styling Google Translate --- */
+#google_translate_element {
+  position: absolute;
+  top: 20px; /* sesuaikan biar sejajar sama globe */
+  right: 100px; /* ubah jarak dari kanan sesuai posisi ikon globe kamu */
+  z-index: 9999;
+  transform: scale(0.8); /* biar lebih kecil dan nyatu */
+  transform-origin: right top;
+}
+
+/* Hilangin background dan border default bawaan Google */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.goog-te-gadget-simple span {
+  color: transparent !important;
+}
+
+/* Sembunyikan tulisan "Google Terjemahan" */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  z-index: 9999;
+  transform: scale(0.8);
+  transform-origin: right top;
+}
+
+/* Biar elemen Google gak dorong layout */
+body > .skiptranslate {
+  display: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+html {
+  margin-top: 0px !important;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 80px; /* bisa kamu ubah sesuai posisi navbar */
+  right: 20px;
+  z-index: 1000;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.navbar-extra a#bahasa {
+  cursor: pointer;
+  z-index: 2000; /* biar di atas elemen lain */
+  position: relative;
+}
+
+/* WEATHER CARD */
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.weather-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.weather-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-left img {
+  width: 48px;
+  height: 48px;
+}
+
+#weather-temp {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.weather-right p {
+  margin: 2px 0;
+  color: #333;
+}
+
+.weather-right .small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .weather-box {
+    gap: 12px;
+  }
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .img{height:180px}
+  .hero{padding:28px}
+}
+@media (max-width:480px){
+  .img{height:150px}
+  .wrap{margin:18px auto}
+  .hero h1{font-size:20px}
+}

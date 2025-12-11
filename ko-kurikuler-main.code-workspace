@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "window.zoomLevel": 0.3,
+    "terminal.integrated.fontSize": 15,
+    "workbench.colorTheme": "Noctis Minimus",
+    "liveServer.settings.multiRootWorkspaceName": "ko-kurikuler-main"
+  }
+}

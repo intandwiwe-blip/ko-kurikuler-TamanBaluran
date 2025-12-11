@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taman Nasional Baluran</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,100;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- MY STYLE -->
+    <link rel="stylesheet" href="ASSETS/css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
+    <nav class="navbar">
+      <!-- logo img -->
+      <a href="#logo" class="navbar-logo">
+        <img src="ASSETS/img/logobaluran.png" width="60" height="60" />
+      </a>
+
+      <a href="#home" class="navbar-teks"> Taman <span>Baluran</span> </a>
+
+      <!-- tombol navbar -->
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#galeri">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- feather icon -->
+      <div class="navbar-extra">
+        <!-- Menu cari -->
+        <a href="#" id="search"><i data-feather="search"></i></a>
+
+        <!-- Globe -->
+        <div id="google_translate_element"></div>
+        <a href="#" id="bahasa"><i data-feather="globe"></i></a>
+
+        <!-- Hamburger menu -->
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- Section Start -->
+    <section class="hero" id="home">
+      <!-- Gambar Background -->
+      <img src="assets/img/coverhomepage.jpg" alt="Baluran">
+
+      <!-- Agar tulisan ada efek gelapnya -->
+      <div class="hero-overlay"></div>
+
+      <!-- Isi tulisan -->
+      <div class="hero-content">
+        <h1>WELCOME TO BALURAN</h1>
+        <p>
+          Explore the beauty of savana, wildlife, and the natural charm of
+          Baluran National Park.
+        </p>
+        <a href="#about">Read More →</a>
+      </div>
+    </section>
+
+    <!-- Section About -->
+    <div class="tentang">
+      <section id="about">
+        <h1>ABOUT <span>BALURAN</span></h1>
+        <p>
+          Taman Nasional Baluran dikenal sebagai <br />
+          "Africa van Java" karena pemandangannya mirip padang savana di Afrika.
+          Terletak di Banyuwangi, tempat ini memiliki berbagai ekosistem seperti
+          savana, hutan mangrove, hutan musim, dan pantai alami. Selain itu,
+          Baluran juga memiliki kawasan laut dengan terumbu karang yang indah
+          dan kehidupan bawah laut yang beragam. Pengunjung dapat melihat satwa
+          liar seperti banteng, rusa, monyet ekor panjang, hingga merak. Baluran
+          menjadi destinasi ideal untuk menikmati keindahan alam, berpetualang,
+          dan mengenal lebih dekat kekayaan hayati Indonesia.
+        </p>
+      </section>
+    </div>
+
+    <!-- About(fasilitas) Start -->
+    <div class="tentang-isi">
+      <section class="about-feature">
+        <div class="container">
+          <div class="feature-box">
+            <div class="icon">
+              <a href="p.2-fasilitas/fasilitas.html" id="fasilitas">
+                <i data-feather="database"></i>
+              </a>
+              <!--Tanda Di Dalam Kolom -->
+              <i class="fa fa-leaf"></i>
+            </div>
+
+            <!-- Isi About -->
+            <div class="tombol">
+              <a href="p.2-fasilitas/fasilitas.html">Fasilitas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About (Sejarah) Start -->
+      <section class="about-feature">
+        <div class="container">
+          <div class="feature-box">
+            <div class="icon">
+              <a href="p.3-sejarah/sejarah.html" id="Sejarah">
+                <i data-feather="book-open"></i>
+              </a>
+              <!--Tanda Di Dalam Kolom -->
+              <i class="fa fa-leaf"></i>
+            </div>
+
+            <!-- Isi About -->
+            <div class="tombol">
+              <a href="p.3-sejarah/sejarah.html">Sejarah</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About(lokasi & rute) Start -->
+      <section class="about-feature">
+        <div class="container">
+          <div class="feature-box">
+            <div class="icon">
+              <a href="p.3-Lokasi/lokasi.html" id="lokasinrute">
+                <i data-feather="map-pin"></i>
+              </a>
+              <!--Tanda Di Dalam Kolom -->
+              <i class="fa fa-leaf"></i>
+            </div>
+
+            <!-- Isi About -->
+            <div class="tombol">
+              <a href="p.3-Lokasi/lokasi.html">Lokasi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About(penginapan) Start -->
+      <section class="about-feature">
+        <div class="container">
+          <div class="feature-box">
+            <div class="icon">
+              <a href="p.4-penginapan/penginapan.html" id="penginapan">
+                <i data-feather="home"></i>
+              </a>
+              <!--Tanda Di Dalam Kolom -->
+              <i class="fa fa-leaf"></i>
+            </div>
+
+            <!-- Isi About -->
+            <div class="tombol">
+              <a href="p.4-penginapan/penginapan.html">Penginapan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Section End -->
+
+    <!-- GALERI -->
+    <section class="gallery-section" id="galeri">
+      <h2>Gallery Baluran</h2>
+      <p class="gallery-desc">
+        Koleksi foto flora, fauna, dan suasana alam di Taman Nasional Baluran.
+      </p>
+
+      <div class="gallery-grid">
+        <!-- 1 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/faunabaluran.jpg"
+            alt="Fauna Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Fauna Baluran</span>
+        </div>
+
+        <!-- 2 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/flora sabana.jpg"
+            alt="Flora Sabana"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Flora Sabana</span>
+        </div>
+
+        <!-- 3 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/jalan baluran.jpg"
+            alt="View Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">View Baluran</span>
+        </div>
+
+        <!-- 4 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/jalan.jpg"
+            alt="Jalan Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Jalan Baluran</span>
+        </div>
+
+        <!-- 5 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/kepalabanteng.jpg"
+            alt="Kepala Banteng"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Kepala Banteng</span>
+        </div>
+
+        <!-- 6 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/merakbaluran.jpg"
+            alt="Merak Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Merak Baluran</span>
+        </div>
+
+        <!-- 7 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/rusabaluran.jpg"
+            alt="Rusa Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Rusa Baluran</span>
+        </div>
+
+        <!-- 8 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/sapibaluran.jpg"
+            alt="Sapi Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Sapi Baluran</span>
+        </div>
+
+        <!-- 9 -->
+        <div class="gallery-item">
+          <img
+            src="assets/img/savanabaluran.jpg"
+            alt="Savana Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Savana Baluran</span>
+        </div>
+
+        <!-- 10 --->
+        <div class="gallery-item">
+          <img
+            src="assets/img/pantaibaluran.jpg"
+            alt="Pantai Baluran"
+            onclick="openLightbox(this)"
+          />
+          <span class="caption">Pantai Baluran</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" />
+    </div>
+
+    <script>
+      function openLightbox(img) {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox").classList.add("active");
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("active");
+      }
+    </script>
+
+    <!-- FOOTER -->
+    <section id="contact">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Kolom 1: Logo + Nama Anggota -->
+          <div class="footer-col">
+            <h3>Designed By</h3>
+            <ul>
+              <li>Almira Prastika Ningrum</li>
+              <li>Intan Dwi Wardani</li>
+              <li>Gracesita Yuecha Putri Jameela</li>
+            </ul>
+          </div>
+
+          <!-- Kolom 2: Alamat & Kontak -->
+          <div class="footer-col">
+            <h3>Alamat & Kontak</h3>
+            <p>
+              Jl. Raya Banyuwangi - Situbondo Km. 35<br />
+              Wonorejo, Banyuputih - Situbondo<br />
+              Jawa Timur
+            </p>
+            <p>(0333) 461650</p>
+            <p>balurannationalpark@gmail.com</p>
+          </div>
+
+          <!-- Kolom 3: Link Terkait -->
+          <div class="footer-col">
+            <h3>Link Terkait</h3>
+            <ul>
+              <li><a href="#">Kementerian LHK</a></li>
+              <li><a href="#">Ditjen KSDAE</a></li>
+              <li><a href="#">PPID</a></li>
+              <li><a href="#">LPSE</a></li>
+              <li><a href="#">Biro Kepegawaian</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 SMK NEGERI 1 BANYUWANGI - Website Baluran Project</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- feather icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "id" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>

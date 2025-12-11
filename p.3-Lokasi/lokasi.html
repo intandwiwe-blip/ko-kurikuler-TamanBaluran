@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lokasi Taman Nasional Baluran</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,100;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="lokasi.css" />
+</head>
+<body>
+
+  <!-- NAVBAR START -->
+    <nav class="navbar">
+      <!-- logo img -->
+      <a href="#logo" class="navbar-logo">
+        <img src="../ASSETS/img/logobaluran.png" width="60" height="60" />
+      </a>
+
+      <a href="../index.html" class="navbar-teks"> Taman <span>Baluran</span> </a>
+
+      <!-- tombol navbar -->
+      <div class="navbar-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#galeri">Gallery</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+      <!-- feather icon -->
+      <div class="navbar-extra">
+        <!-- Menu cari -->
+        <a href="#" id="search"><i data-feather="search"></i></a>
+
+        <!-- Globe -->
+        <div id="google_translate_element"></div>
+        <a href="#" id="bahasa"><i data-feather="globe"></i></a>
+
+        <!-- Hamburger menu -->
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+  <main class="page-wrap">
+    <header class="page-header">
+    <h1>Lokasi Taman Nasional Baluran</h1>
+    <p class="lead">Taman Nasional Baluran — savana, satwa liar, dan sunset yang viral. Berikut lokasi, peta, review pengunjung, estimasi budget, checklist, dan cuaca baluran.</p>
+    </header>
+
+    <!-- MAPS CARD -->
+    <section class="maps-section">
+    <div class="maps-card">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d63234.85861417102!2d114.31050310760307!3d-7.8763664892520096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbaluran!5e0!3m2!1sid!2sid!4v1765360081001!5m2!1sid!2sid"
+        loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </section>
+
+    <!-- Ulasan -->
+    <section class="reviews-section">
+    <h2>Apa kata mereka tentang Baluran?</h2>
+    <div class="reviews-meta">
+        <p class="small">5 ulasan — geser / klik tombol untuk navigasi</p>
+    </div>
+
+    <div class="carousel-wrap">
+        <button class="nav-btn prev" aria-label="Prev">‹</button>
+
+        <div class="carousel" id="carousel">
+        <!-- masing-masing card pakai avatar + nama + isi -->
+        <article class="review-card" data-author="Rina Pratiwi">
+            <div class="card-top">
+            <div class="avatar">RP</div>
+            <div class="who">
+                <h3>Rina Pratiwi</h3>
+                <p class="meta">Pengunjung • 2025</p>
+            </div>
+            </div>
+            <p class="review-text">Tempatnya indah banget! Savana Bekol berasa Afrika—sunsetnya juara. Bawa jaket tipis ya, anginnya kenceng.</p>
+        </article>
+
+        <article class="review-card" data-author="Andi Saputra">
+            <div class="card-top">
+            <div class="avatar">AS</div>
+            <div class="who">
+                <h3>Andi Saputra</h3>
+                <p class="meta">Backpacker • 2025</p>
+            </div>
+            </div>
+            <p class="review-text">Akses oke, pemandangan alami, banyak satwa. Cocok buat healing dan foto sunset. Parkir agak terbatas pas weekend.</p>
+        </article>
+
+        <article class="review-card" data-author="Maya Lestari">
+            <div class="card-top">
+            <div class="avatar">ML</div>
+            <div class="who">
+                <h3>Maya Lestari</h3>
+                <p class="meta">Fotografer • 2025</p>
+            </div>
+            </div>
+            <p class="review-text">Merak, banteng, dan rusa kelihatan di habitatnya. Bawa lensa zoom kalau mau foto fauna dari aman.</p>
+        </article>
+
+        <article class="review-card" data-author="Dimas Rahma">
+            <div class="card-top">
+            <div class="avatar">DR</div>
+            <div class="who">
+                <h3>Dimas Rahma</h3>
+                <p class="meta">Traveler • 2025</p>
+            </div>
+            </div>
+            <p class="review-text">Jalan masuk panjang, tapi pemandangan di savana bayar lunas. Bawa camilan dan air mineral banyak.</p>
+        </article>
+
+        <article class="review-card" data-author="Ferdian T.">
+            <div class="card-top">
+            <div class="avatar">FT</div>
+            <div class="who">
+                <h3>Ferdian T.</h3>
+                <p class="meta">Keluarga • 2025</p>
+            </div>
+            </div>
+            <p class="review-text">Tempat terbaik untuk wisata alam di Jawa Timur. Udara segar dan pemandangan natural yang memukau.</p>
+        </article>
+        </div>
+
+        <button class="nav-btn next" aria-label="Next">›</button>
+    </div>
+    </section>
+
+    <!-- BAWAH ULASAN: BUDGET | CHECKLIST | CAPTIONS -->
+    <section class="info-grid">
+
+    <!-- Budget -->
+    <div class="info-card budget">
+        <h3>Perkiraan Budget</h3>
+        <div class="budget-rows">
+        <div class="budget-type">
+            <h4>Fancy (Comfort)</h4>
+            <ul>
+            <li>Transport (rental mobil + bbm): Rp 800.000 - 1.200.000</li>
+            <li>Akomodasi (hotel mid-high): Rp 600.000 - 1.500.000 / malam</li>
+            <li>Makan & tiket: Rp 200.000 - 400.000</li>
+            </ul>
+            <p class="est">Estimasi total / orang: <strong>Rp 1.600.000 – Rp 3.100.000</strong></p>
+        </div>
+
+        <div class="budget-type">
+            <h4>Sederhana (Hemat)</h4>
+            <ul>
+            <li>Transport (bensin + tol): Rp 150.000 - 350.000</li>
+            <li>Akomodasi (homestay/guest): Rp 100.000 - 300.000 / malam</li>
+            <li>Makan & tiket: Rp 80.000 - 150.000</li>
+            </ul>
+            <p class="est">Estimasi total / orang: <strong>Rp 330.000 – Rp 800.000</strong></p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Checklist -->
+    <div class="info-card checklist">
+        <h3>Checklist Wajib Bawa</h3>
+        <ul class="checklist-list">
+        <li><input type="checkbox" id="c1"><label for="c1">Air minum (min. 1.5L)</label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">Sunblock & topi</label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">Pakaian ganti & jaket tipis</label></li>
+        <li><input type="checkbox" id="c4"><label for="c4">Sepatu tertutup / hiking</label></li>
+        <li><input type="checkbox" id="c5"><label for="c5">Obat pribadi & antiseptik</label></li>
+        <li><input type="checkbox" id="c6"><label for="c6">Powerbank & kamera</label></li>
+        <li><input type="checkbox" id="c7"><label for="c7">Sampah dibawa pulang (plastik kosong)</label></li>
+        </ul>
+    </div>
+    <!-- Weather Widget -->
+<div class="info-card weather-card">
+    <h3>Cuaca Baluran Saat Ini</h3>
+    <div class="weather-box">
+        <div class="weather-left">
+            <img id="weather-icon" src="" alt="Weather icon">
+            <span id="weather-temp">--°C</span>
+        </div>
+        <div class="weather-right">
+            <p id="weather-desc">Memuat...</p>
+            <p class="small" id="weather-loc">Baluran, Indonesia</p>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+  </main>
+
+  <!-- feather icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="../js/script.js"></script>
+
+      <!-- GOOGLE TRANSLATE SCRIPT -->
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {pageLanguage: 'id'},
+            'google_translate_element'
+          );
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+  <!-- JS: carousel scroll-snap + buttons + center highlight -->
+  <script>
+    const carousel = document.getElementById('carousel');
+    const prev = document.querySelector('.nav-btn.prev');
+    const next = document.querySelector('.nav-btn.next');
+    const cards = Array.from(carousel.querySelectorAll('.review-card'));
+
+    // scroll by card width (including gap)
+    function scrollByCard(direction = 1) {
+      const cardStyle = getComputedStyle(cards[0]);
+      const gap = parseInt(cardStyle.marginRight || 16);
+      const cardWidth = cards[0].offsetWidth + gap;
+      carousel.scrollBy({left: cardWidth * direction, behavior: 'smooth'});
+    }
+
+    prev.addEventListener('click', () => scrollByCard(-1));
+    next.addEventListener('click', () => scrollByCard(1));
+
+    // Center highlight using IntersectionObserver
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && e.intersectionRatio > 0.55) {
+          cards.forEach(c => c.classList.remove('active'));
+          e.target.classList.add('active');
+        }
+      });
+    }, { threshold: [0.55] });
+
+    cards.forEach(c => obs.observe(c));
+
+    // make carousel keyboard accessible
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') scrollByCard(1);
+      if (e.key === 'ArrowLeft') scrollByCard(-1);
+    });
+    </script>
+
+    <script>
+  // WEATHER API REALTIME
+  async function loadWeather() {
+    const apiKey = "https://api.open-meteo.com/v1/forecast?latitude=-7.91&longitude=114.39&current_weather=true";
+
+    try {
+      const res = await fetch(apiKey);
+      const data = await res.json();
+
+      const weather = data.current_weather;
+      const temp = weather.temperature;
+      const code = weather.weathercode;
+
+      // ICON DISESUAIKAN DENGAN KODE
+      const iconMap = {
+        0: "https://img.icons8.com/fluency/96/sun.png",
+        1: "https://img.icons8.com/fluency/96/partly-cloudy-day.png",
+        2: "https://img.icons8.com/fluency/96/cloud.png",
+        3: "https://img.icons8.com/fluency/96/cloud.png",
+        45: "https://img.icons8.com/fluency/96/fog-day.png",
+        48: "https://img.icons8.com/fluency/96/fog-day.png",
+        51: "https://img.icons8.com/fluency/96/light-rain.png",
+        61: "https://img.icons8.com/fluency/96/rain.png",
+        71: "https://img.icons8.com/fluency/96/snow.png",
+        95: "https://img.icons8.com/fluency/96/storm.png"
+      };
+
+      const descMap = {
+        0: "Cerah",
+        1: "Cerah Berawan",
+        2: "Berawan",
+        3: "Berawan Tebal",
+        45: "Berkabut",
+        48: "Berkabut",
+        51: "Gerimis",
+        61: "Hujan Ringan",
+        71: "Salju Ringan",
+        95: "Badai Petir"
+      };
+
+      document.getElementById("weather-temp").textContent = temp + "°C";
+      document.getElementById("weather-desc").textContent = descMap[code] || "Tidak diketahui";
+      document.getElementById("weather-icon").src = iconMap[code] || iconMap[2];
+
+    } catch (e) {
+      document.getElementById("weather-desc").textContent = "Gagal memuat cuaca";
+    }
+  }
+
+  loadWeather();
+</script>
+
+
+  <footer>
+    <p>© 2025 Taman Nasional Baluran | Designed by Intan, Almira, Grace</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Penginapan Terdekat dari Baluran</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,100;1,700&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="penginapan.css">
+</head>
+<body>
+    <!-- NAVBAR START -->
+    <nav class="navbar">
+      <!-- logo img -->
+      <a href="#logo" class="navbar-logo">
+        <img src="../ASSETS/img/logobaluran.png" width="60" height="60" />
+      </a>
+
+      <a href="../index.html" class="navbar-teks"> Taman <span>Baluran</span> </a>
+
+      <!-- tombol navbar -->
+      <div class="navbar-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#galeri">Gallery</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+      <!-- feather icon -->
+      <div class="navbar-extra">
+        <!-- Menu cari -->
+        <a href="#" id="search"><i data-feather="search"></i></a>
+
+        <!-- Globe -->
+        <div id="google_translate_element"></div>
+        <a href="#" id="bahasa"><i data-feather="globe"></i></a>
+
+        <!-- Hamburger menu -->
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>Penginapan Terdekat dari Baluran</h1>
+        <p class="lead">7 pilihan penginapan sekitar pintu masuk Baluran — homestay, guesthouse, dan wisma dalam area Bekol. (Harga & jarak: perkiraan dari sumber online; verifikasi bila akan dipublish.)</p>
+        <div class="hero-ctas">
+          <a href="#list" class="btn primary">Lihat Daftar</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- LIST: 7 CARDS -->
+    <section id="list" class="list-section">
+      <div class="grid">
+
+        <!-- 1 Buana Homestay -->
+        <article class="card">
+          <div class="img">
+            <img src="img/buana-homestay.jpg" alt="Buana Homestay">
+          </div>
+          <div class="card-body">
+            <h3>Buana Homestay</h3>
+            <p class="meta">Lokasi: Randu Agung, Wonorejo (desa wisata Wonorejo)</p>
+            <p class="meta">Perkiraan jarak/waktu ke Pintu Masuk Baluran: <strong>~25–30 menit berkendara</strong> (estimasi Google Maps / sumber lokal).</p>
+            <p class="price">Harga: <strong>Mulai Rp 200.000 / malam</strong> (perkiraan dari listing homestay & desa wisata).</p>
+            <p class="fac">Fasilitas: WiFi (area), Parkir, Sarapan (opsional)</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions">
+              <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Buana+Homestay+Wonorejo" target="_blank" rel="noopener">Cek di Maps</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 Homestay Baluran Indah -->
+        <article class="card">
+          <div class="img"><img src="img/homestay-baluran-indah.jpg" alt="Homestay Baluran Indah"></div>
+          <div class="card-body">
+            <h3>Homestay Baluran Indah</h3>
+            <p class="meta">Lokasi: Randu Agung, Wonorejo</p>
+            <p class="meta">Perkiraan jarak/waktu ke Pintu Masuk Baluran: <strong>~20–30 menit berkendara</strong>.</p>
+            <p class="price">Harga: <strong>Mulai Rp 200.000 / malam</strong> (sumber desa wisata / jadesta).</p>
+            <p class="fac">Fasilitas: Sarapan, Kipas/AC tergantung unit, Parkir</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Homestay+Baluran+Indah+Wonorejo" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+        <!-- 3 RedDoorz Near Baluran -->
+        <article class="card">
+          <div class="img"><img src="img/reddoorz-baluran.jpg" alt="RedDoorz Near Baluran"></div>
+          <div class="card-body">
+            <h3>RedDoorz Near Baluran (guesthouse)</h3>
+            <p class="meta">Lokasi: area dekat pintu masuk / Wonorejo</p>
+            <p class="meta">Perkiraan jarak/waktu: <strong>~25–35 menit berkendara</strong>.</p>
+            <p class="price">Harga: <strong>Rp 150.000 – 350.000 / malam</strong> (perkiraan OTA / budget hotel).</p>
+            <p class="fac">Fasilitas: AC, Parkir, Kamar dasar</p>
+            <p class="rating">Rating (estimasi): ★★★☆☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=RedDoorz+Near+Baluran" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+        <!-- 4 Wisma Rusa (di Bekol) -->
+        <article class="card">
+          <div class="img"><img src="img/wisma-rusa.jpg" alt="Wisma Rusa"></div>
+          <div class="card-body">
+            <h3>Wisma Rusa (Bekol)</h3>
+            <p class="meta">Lokasi: Dalam kawasan Savana Bekol (TN Baluran)</p>
+            <p class="meta">Perkiraan jarak/waktu: <strong>di dalam area Bekol (langsung sampai)</strong>.</p>
+            <p class="price">Harga historis: <strong>Rp 35.000 – 100.000 / orang</strong> atau ~Rp100.000/kamar (sumber panduan wisata).</p>
+            <p class="fac">Fasilitas: Sederhana (sharing mandi, listrik terbatas), ideal untuk pengalaman savana.</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Wisma+Rusa+Bekol+Baluran" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+        <!-- 5 Wisma Merak (di Bekol) -->
+        <article class="card">
+          <div class="img"><img src="img/wisma-merak.jpg" alt="Wisma Merak"></div>
+          <div class="card-body">
+            <h3>Wisma Merak (Bekol)</h3>
+            <p class="meta">Lokasi: Dalam kawasan Savana Bekol</p>
+            <p class="meta">Perkiraan jarak/waktu: <strong>di dalam area Bekol (langsung)</strong>.</p>
+            <p class="price">Harga historis: <strong>Rp 50.000 – 150.000 / kamar / orang</strong> (perkiraan dan catatan lokal).</p>
+            <p class="fac">Fasilitas: Sederhana, cocok untuk fotografi fauna & sunrise.</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Wisma+Merak+Bekol+Baluran" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+        <!-- 6 Wisma Banteng (di Bekol) -->
+        <article class="card">
+          <div class="img"><img src="img/wisma-banteng.jpg" alt="Wisma Banteng"></div>
+          <div class="card-body">
+            <h3>Wisma Banteng (Bekol)</h3>
+            <p class="meta">Lokasi: Dalam kawasan Savana Bekol (TN Baluran)</p>
+            <p class="meta">Perkiraan jarak/waktu: <strong>di dalam area Bekol</strong>.</p>
+            <p class="price">Harga historis: <strong>Rp 250.000 – 400.000 / unit (bungalow)</strong>.</p>
+            <p class="fac">Fasilitas: Bungalow sederhana, kapasitas beberapa orang.</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Wisma+Banteng+Bekol+Baluran" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+        <!-- 7 Baloeran Ecolodge -->
+        <article class="card">
+          <div class="img"><img src="img/baloeran-ecolodge.jpg" alt="Baloeran Ecolodge"></div>
+          <div class="card-body">
+            <h3>Baloeran Ecolodge</h3>
+            <p class="meta">Lokasi: Wonorejo (desa dekat Baluran)</p>
+            <p class="meta">Perkiraan jarak/waktu ke Pintu Masuk Baluran: <strong>~20–40 menit berkendara</strong> (estimasi).</p>
+            <p class="price">Harga: <strong>Estimasi mulai Rp 250.000 / malam</strong> (lihat situs resmi untuk paket & rate). </p>
+            <p class="fac">Fasilitas: Hot shower, penginapan bergaya ecotour, paket tur lokal.</p>
+            <p class="rating">Rating (estimasi): ★★★★☆</p>
+            <div class="actions"><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Baloeran+Ecolodge+Wonorejo" target="_blank" rel="noopener">Cek di Maps</a></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2025 Taman Nasional Baluran | Designed by Intan, Almira, Grace</p>
+    </footer>
+  </main>
+
+    <!-- feather icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My JavaScript -->
+    <script src="../js/script.js"></script>
+
+    <!-- GOOGLE TRANSLATE SCRIPT -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "id" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+</body>
+</html>

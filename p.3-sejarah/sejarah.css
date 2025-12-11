@@ -1,0 +1,378 @@
+/* ===== Body ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; /* hapus garis fokus */
+  border: none; /* hapus border default */
+  text-decoration: none; /* hapus garis bawah link */
+}
+
+html {
+  margin: 0; /* reset margin html */
+  padding: 0; /* reset padding html */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* font utama untuk seluruh halaman */
+  margin: 0; /* hilangkan margin default browser */
+  padding: 0; /* hilangkan padding default browser */
+  background-color: #fdfaf6; /* warna latar vintage */
+  color: #333; /* warna teks default */
+  position: relative; /* supaya floating icons bisa absolute di body */
+  overflow-x: hidden; /* cegah scroll horizontal */
+  padding-top: 70px;
+}
+
+
+/* =====================================================
+   NAVBAR START
+   ===================================================== */
+.navbar {
+  display: flex; /* Biar item-item di navbar sejajar ke samping */
+  justify-content: space-between; /* Yang kiri sama kanan dijauhin biar rapi */
+  align-items: center; /* Tingginya dibikin rata tengah semua */
+
+  position: fixed; /* Navbar-nya nempel terus di atas layar */
+  top: 0; /* Ditempel di bagian paling atas */
+  left: 0; /* Ditaro dari sisi kiri layar */
+  width: 100%; /* Lebarnya full satu layar */
+  z-index: 9999; /* Biar ga ketutupan elemen lain */
+
+  padding: 10px 40px; /* Jarak dalam, biar ga dempet ke pinggir */
+  border-bottom: 1px solid #b6895b; /* Garis tipis di bawah biar keliatan keren */
+
+  background-color: rgba(244, 237, 237, 0.9); /* Warna putih agak transparan */
+  backdrop-filter: blur(5px); /* Bikin efek blur */
+  -webkit-backdrop-filter: blur(5px); /* biar bisa di safari */
+
+  transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Animasi halus kalo berubah */
+}
+
+.navbar.scrolled {
+  background: #eee6e6af; /* warna navbar pas di-scroll */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* biar support Safari */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+.navbar .navbar-logo {
+  padding-top: 5px; /* jarak atas logo */
+  margin-left: -8px; /* geser logo ke kiri */
+}
+
+.navbar .navbar-teks {
+  font-size: 1.2rem; /* ukuran teks */
+  font-weight: 700; /* ketebalan teks */
+  color: #27804d; /* warna teks */
+  position: absolute; /* biar bisa diatur bebas */
+  padding-left: 63px; /* jarak kiri teks */
+  font-style: italic; /* teks miring */
+  text-decoration: none;
+}
+
+.navbar .navbar-teks span {
+  color: #0e3d0d; /* warna hijau gelap di span */
+}
+
+.navbar .navbar-nav a {
+  color: #0e3d0d; /* warna teks menu */
+  display: inline-block; /* sejajar horizontal */
+  font-size: 1.3rem; /* ukuran teks menu */
+  margin: 0 1rem; /* jarak antar menu */
+  font-weight: 530; /* ketebalan teks */
+  padding-top: 14px; /* jarak teks dari atas */
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #2e965b; /* ubah warna pas hover */
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0; /* garis muncul dari kiri */
+  content: ''; /* garis bawah */
+  display: block; /* biar bisa diatur ukuran */
+  padding-bottom: 0.5rem; /* jarak bawah */
+  border-bottom: 0.1rem solid #2e965b; /* warna garis bawah */
+  transform: scaleX(0); /* sembunyikan dulu */
+  transition: 0.2s linear; /* efek animasi */
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1); /* garis muncul di bawah */
+}
+
+.navbar .navbar-extra a {
+  color: rgb(41, 60, 17); /* warna icon */
+  margin: 0 0.5rem; /* jarak antar icon */
+}
+
+.navbar .navbar-extra a:hover {
+  color: #2e965b; /* warna icon pas hover */
+}
+
+/* Bagian header di atas halaman */
+.header {
+  text-align: center; /* Teks rata tengah */
+  padding: 80px 20px 40px; /* Jarak dalam elemen */
+  background: #eee6e6af; /* Warna background lembut */
+  backdrop-filter: blur(6px); /* Tambanhan efek blur biar soft */
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center; /* teks berada di tengah */
+  padding: 50px 20px; /* jarak atas/bawah 50px, kiri/kanan 20px */
+  background-color: #f5f2eb; /* warna latar header */
+}
+
+.header h1 {
+  font-size: 36px; /* ukuran judul */
+  margin-bottom: 10px; /* jarak bawah */
+}
+
+.header p {
+  font-size: 18px; /* ukuran paragraf */
+  color: #666; /* warna teks paragraf */
+}
+
+/* ===== Timeline / Grid Card ===== */
+.timeline {
+  display: grid; /* gunakan grid untuk layout card */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* card responsif minimal 300px */
+  gap: 30px; /* jarak antar card */
+  padding: 50px 20px; /* jarak section */
+  max-width: 1200px; /* lebar maksimal section */
+  margin: 0 auto; /* center section */
+  position: relative; /* supaya z-index card berlaku */
+  z-index: 1; /* pastikan card muncul di atas floating icon */
+}
+
+/* ===== Card ===== */
+.card {
+  background-color: #fff8f0; /* warna latar card */
+  padding: 20px; /* jarak isi card */
+  border-radius: 15px; /* sudut card melengkung */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* shadow lembut */
+  position: relative; /* untuk posisi icon absolute */
+  overflow: hidden; /* sembunyikan yang keluar card */
+  transform: translateY(0); /* posisi awal */
+  opacity: 1; /* card langsung terlihat */
+  transition: all 0.5s ease; /* transisi smooth */
+}
+
+/* ===== Hover Card ===== */
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* naik & sedikit membesar */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* shadow lebih tebal saat hover */
+}
+
+/* ===== Icon di Card ===== */
+.card .icon {
+  width: 40px; /* lebar icon */
+  height: 40px; /* tinggi icon */
+  position: absolute; /* posisi absolute di card */
+  top: 15px; /* jarak dari atas card */
+  right: 15px; /* jarak dari kanan card */
+}
+
+.card .icon img {
+  width: 100%; /* icon mengisi container */
+  height: auto; /* tinggi menyesuaikan */
+}
+
+/* ===== Judul & Teks Card ===== */
+.card h2 {
+  font-size: 22px; /* ukuran judul card */
+  margin-bottom: 10px; /* jarak bawah */
+  color: #8b5e3c; /* warna judul */
+}
+
+.card p {
+  font-size: 16px; /* ukuran paragraf card */
+  line-height: 1.6; /* jarak antar baris */
+  color: #555; /* warna teks card */
+}
+
+/* ================================
+   DESKTOP (>= 1024px)
+   ================================ */
+@media (min-width: 1024px) {
+  /* Hilangin hamburger */
+  #hamburger-menu {
+    display: none;
+  }
+
+  .fasilitas-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    padding: 40px 100px;
+  }
+
+  .fasilitas-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .fasilitas-item img {
+    width: 90px;
+    margin: 0 auto 15px auto;
+  } 
+}
+
+/* DESKTOP */ 
+@media (min-width: 1024px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+/* SEMBUNYIKAN HAMBURGER DI DESKTOP */
+#hamburger-menu {
+  display: none; /* tidak tampil di desktop */
+}
+
+/* HP + Tablet */
+@media (max-width: 1023px) {
+
+  /* Sembunyikan menu utama */
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5); /* agar garis dibawah teksnya tidak kepanjangan */
+  }
+
+  /* Tampilkan menu setelah hamburger diklik */
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  /* Tampilkan hamburger */
+  #hamburger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar-extra {
+    display: flex;
+    align-items: center;
+    gap: 4px;  /* kasih jarak ikon */
+  }
+
+  #hamburger-menu {
+    order: 3; /* biar posisinya setelah globe */
+    display: block;
+  }
+
+  #search {
+    order: 1;
+  }
+
+  #bahasa { /* ikon globe */
+    order: 2;
+  }
+}
+
+
+/* --- Styling Google Translate --- */
+#google_translate_element {
+  position: absolute;
+  top: 20px; /* sesuaikan biar sejajar sama globe */
+  right: 100px; /* ubah jarak dari kanan sesuai posisi ikon globe kamu */
+  z-index: 9999;
+  transform: scale(0.8); /* biar lebih kecil dan nyatu */
+  transform-origin: right top;
+}
+
+/* Hilangin background dan border default bawaan Google */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.goog-te-gadget-simple span {
+  color: transparent !important;
+}
+
+/* Sembunyikan tulisan "Google Terjemahan" */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  z-index: 9999;
+  transform: scale(0.8);
+  transform-origin: right top;
+}
+
+/* Biar elemen Google gak dorong layout */
+body > .skiptranslate {
+  display: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+html {
+  margin-top: 0px !important;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 80px; /* bisa kamu ubah sesuai posisi navbar */
+  right: 20px;
+  z-index: 1000;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.navbar-extra a#bahasa {
+  cursor: pointer;
+  z-index: 2000; /* biar di atas elemen lain */
+  position: relative;
+}
+
+/* Bagian footer di bawah halaman */
+footer {
+  text-align: center; /* Rata tengah */
+  padding: 30px; /* Jarak dalam */
+  background: #eee6e6af; /* Warna lembut */
+  margin-top: 60px; /* Jarak dari atas */
+  font-size: 0.9rem; /* Ukuran kecil */
+  color: #0e3d0d; /* Warna teks */
+  letter-spacing: 0.5px; /* Jarak antar huruf sedikit */
+} 

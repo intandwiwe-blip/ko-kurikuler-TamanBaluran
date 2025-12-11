@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Translator</title>
+  <style>
+    body { font-family: Arial; padding: 30px; text-align: center; }
+    textarea { width: 80%; height: 100px; margin-bottom: 15px; }
+    select, button { padding: 8px; margin: 5px; font-size: 16px; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>🌐 Web Translator Gratis</h2>
+
+  <textarea id="text" placeholder="Ketik teks di sini..."></textarea><br>
+
+  <select id="from">
+    <option value="en">Inggris</option>
+    <option value="id">Indonesia</option>
+  </select>
+
+  ➜
+
+  <select id="to">
+    <option value="id">Indonesia</option>
+    <option value="en">Inggris</option>
+  </select><br>
+
+  <button onclick="translateText()">Translate</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function translateText() {
+      const text = document.getElementById("text").value;
+      const from = document.getElementById("from").value;
+      const to = document.getElementById("to").value;
+
+      const res = await fetch("https://translate.argosopentech.com/translate", {
+        method: "POST",
+        body: JSON.stringify({
+          q: text,
+          source: from,
+          target: to,
+          format: "text"
+        }),
+        headers: { "Content-Type": "application/json" }
+      });
+
+      const data = await res.json();
+      document.getElementById("result").innerText = data.translatedText;
+    }
+  </script>
+
+</body>
+</html>
